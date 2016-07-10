@@ -2,7 +2,7 @@
 % This script provides implementation of code for estimating velocty and 
 % displacement from IMU data when trajectory has known waypoints.
 % Written by Ryan S. McGinnis - ryan.mcginis14@gmail.com - July 9, 2016
-
+%
 % Copyright (C) 2016  Ryan S. McGinnis
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -28,9 +28,9 @@
 addpath('C:\Users\ryanmcg\Documents\Repos\IMU-orientation'); % add location of IMU orientaiton repo to path
 load('example_data.mat');
 t = data.t;
-a = data.a; %m/s^2
-w = data.w; %rad/s
-spine_dir = data.spine_dir;
+a = data.a; %m/s^2 - IMU accelerometer measurement
+w = data.w; %rad/s - IMU angular rate gyro measurement
+spine_dir = data.spine_dir; % direction of anatomical longitudinal axis in IMU-frame
 ind = data.ind_still; % indices for still section at beginning of trial
 
 % Manage memory
