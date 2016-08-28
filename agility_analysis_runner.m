@@ -150,7 +150,7 @@ plot(t_j,w_zF);
 %Filter out noise in data due to foot falls
 fs = 1/mean(diff(t_j)); % sampling frequency
 filter_order = 2;   % 4th order filter
-cut_off = 4*(5/t_j(end)-t_j(1)); % cutoff frequency (Hz)
+cut_off = 4*(5/(t_j(end)-t_j(1))); % cutoff frequency (Hz)
 [num,den] = butter(filter_order,cut_off/(fs/2),'low');
 
 v_j = cumtrapz(t_j,a_j); %m/s
